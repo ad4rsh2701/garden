@@ -3,13 +3,13 @@ layout: base.njk
 ---
 
 <nav>
-  <span class="logo">{{ site.project }}</span>
+  <a href="/" class="logo">{{ site.project }}</a>
   <div class="nav-links">
-    <a href="#about">about</a>
-    <a href="#experience">experience</a>
-    <a href="#projects">projects</a>
+    <a href="/">home</a>
+    <a href="/projects">projects</a>
+    <a href="/blog">blog</a>
     <a href="#contact">contact</a>
-    <button id="theme-toggle">[ go dark ]</button>
+    <button id="theme-toggle">[ dark ]</button>
   </div>
 </nav>
 
@@ -50,6 +50,7 @@ layout: base.njk
   <section id="projects">
     <p class="label">// projects</p>
     {% for project in site.projects %}
+    {% if project.featured %}
     <div class="project">
       <div>
         <p class="project-name">{{ project.name }}</p>
@@ -62,7 +63,9 @@ layout: base.njk
       </div>
       <a href="{{ project.link }}" class="project-link">↗ github</a>
     </div>
+    {% endif %}
     {% endfor %}
+    <a href="/projects" class="view-all">view all projects →</a>
   </section>
 
   <hr />
@@ -107,11 +110,10 @@ layout: base.njk
   function setTheme(dark) {
     document.body.classList.toggle('dark', dark);
     document.documentElement.classList.toggle('dark', dark);
-    toggle.textContent = dark ? '[ go light ]' : '[ go dark ]';
+    toggle.textContent = dark ? '[ light ]' : '[ dark ]';
     localStorage.setItem('theme', dark ? 'dark' : 'light');
   }
 
-  // restore on load
   setTheme(localStorage.getItem('theme') === 'dark');
 
   toggle.addEventListener('click', () => {
