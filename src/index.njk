@@ -48,10 +48,33 @@ layout: base.njk
 
 <section id="contact">
   <p class="label">// contact</p>
-  <p class="contact-line">email — <span>{{ site.contact.email }}</span></p>
-  <p class="contact-line">github — <span>{{ site.contact.github }}</span></p>
-  <p class="contact-line">linkedin — <span>{{ site.contact.linkedin }}</span></p>
+  <div class="contact-box">
+    <div class="contact-line" onclick="copy('adarsharyan2701@gmail.com')" title="click to copy">
+      <span class="contact-key">email</span>
+      <span class="contact-val">adarsharyan2701@gmail.com</span>
+    </div>
+    <a class="contact-line" href="https://github.com/ad4rsh2701" target="_blank" rel="noopener">
+      <span class="contact-key">github</span>
+      <span class="contact-val">ad4rsh2701 ↗</span>
+    </a>
+    <a class="contact-line" href="https://linkedin.com/in/adarsh2701" target="_blank" rel="noopener">
+      <span class="contact-key">linkedin</span>
+      <span class="contact-val">adarsh2701 ↗</span>
+    </a>
+  </div>
 </section>
+
+<div class="toast" id="toast">copied to clipboard!</div>
+
+<script>
+  function copy(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    });
+  }
+</script>
 
 <footer>
   <div class="footer-left">
