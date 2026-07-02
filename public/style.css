@@ -101,4 +101,20 @@ footer {
     color: #999;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
+
+.footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.footer-right { text-align: right; }
+
+.footer-link {
+    font-size: 11px;
+    color: #999;
+    text-decoration: none;
+}
+.footer-link:hover { color: #111; }
