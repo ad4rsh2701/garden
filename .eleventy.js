@@ -1,5 +1,5 @@
 module.exports = (cfg) => {
-    cfg.addPassthroughCopy("public");
+    cfg.addPassthroughCopy({"public/style.css": "style.css"});
     return {
         dir: {
             input: "src",
