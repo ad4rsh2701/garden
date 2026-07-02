@@ -1,0 +1,59 @@
+---
+layout: base.njk
+---
+
+<nav>
+  <span class="logo">{{ site.project }}</span>
+  <div class="nav-links">
+    <a href="#about">about</a>
+    <a href="#projects">projects</a>
+    <a href="#contact">contact</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <p class="label">// hello</p>
+  <h1>{{ site.name }}</h1>
+  <p class="sub">{{ site.role }}</p>
+</section>
+
+<hr />
+
+<section id="about">
+  <p class="label">// about</p>
+  <p class="about-text">{{ site.about }}</p>
+</section>
+
+<hr />
+
+<section id="projects">
+  <p class="label">// projects</p>
+  {% for project in site.projects %}
+  <div class="project">
+    <div>
+      <p class="project-name">{{ project.name }}</p>
+      <p class="project-desc">{{ project.desc }}</p>
+      <div class="tags">
+        {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <a href="{{ project.link }}" class="project-link">↗ github</a>
+  </div>
+  {% endfor %}
+</section>
+
+<hr />
+
+<section id="contact">
+  <p class="label">// contact</p>
+  <p class="contact-line">email — <span>{{ site.contact.email }}</span></p>
+  <p class="contact-line">github — <span>{{ site.contact.github }}</span></p>
+  <p class="contact-line">linkedin — <span>{{ site.contact.linkedin }}</span></p>
+</section>
+
+<footer>
+  <span>built with 11ty</span>
+  <span>2026</span>
+</footer>

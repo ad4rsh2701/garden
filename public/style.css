@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: #fafafa;
+    color: #111;
+    line-height: 1.6;
+}
+
+.wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid #ddd;
+}
+
+.logo { font-size: 13px; font-weight: 500; }
+
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a {
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.nav-links a:hover { color: #111; }
+
+/* sections */
+section { margin-bottom: 3.5rem; }
+
+.label {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 28px; font-weight: 500; margin-bottom: 0.4rem; }
+.sub { font-size: 14px; color: #555; }
+
+.about-text { font-size: 13px; line-height: 1.8; color: #555; max-width: 480px; }
+
+hr { border: none; border-top: 0.5px solid #ddd; margin: 3rem 0; }
+
+/* projects */
+.project {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid #eee;
+}
+.project:last-child { border-bottom: none; }
+
+.project-name { font-size: 13px; font-weight: 500; margin-bottom: 0.25rem; }
+.project-desc { font-size: 12px; color: #666; }
+
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.tag {
+    font-size: 10px;
+    color: #999;
+    border: 0.5px solid #ddd;
+    padding: 2px 7px;
+    border-radius: 3px;
+}
+
+.project-link {
+    font-size: 11px;
+    color: #999;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 1rem;
+    margin-top: 2px;
+}
+.project-link:hover { color: #111; }
+
+/* contact */
+.contact-line { font-size: 13px; color: #666; margin-bottom: 0.5rem; }
+.contact-line span { color: #111; }
+
+/* footer */
+footer {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 0.5px solid #ddd;
+    font-size: 11px;
+    color: #999;
+    display: flex;
+    justify-content: space-between;
+}

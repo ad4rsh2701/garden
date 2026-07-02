@@ -1,14 +1,26 @@
 {
   "name": "garden",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
+  "description": "A webpage for myself, it's a hub for all my projects and blogs.",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ad4rsh2701/garden.git"
+  },
+  "keywords": [],
+  "author": "Adarsh Aryan",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ad4rsh2701/garden/issues"
+  },
+  "homepage": "https://github.com/ad4rsh2701/garden#readme",
   "devDependencies": {
-    "typescript": "^5.5.3"
-  },
-  "private": true
+    "@11ty/eleventy": "^3.1.6"
+  }
 }
