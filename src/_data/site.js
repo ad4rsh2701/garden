@@ -34,6 +34,12 @@ module.exports = {
             tags: ["Python", "Aggregator", "YARA"],
             link: "https://github.com/ad4rsh2701/zense"
         },
+        {
+            name: "null-widget",
+            desc: "Win32 based widget for Windows",
+            tags: ["C++", "win32", "GDI", "Direct2D"],
+            link: "https://github.com/ad4rsh2701/null-widget"
+        }
     ],
     contact: {
         email: "adarsharyan2701@gmail.com",
