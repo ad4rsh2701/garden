@@ -3,7 +3,7 @@ module.exports = (cfg) => {
     return {
         dir: {
             input: "src",
-            output: "out",
+            output: "_site",
             includes: "_includes"
         }
     };
