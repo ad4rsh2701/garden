@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 <nav>
-  <span class="logo">{{ site.project }}</span>
+  <span class="logo">{{ site.project }}/me</span>
   <div class="nav-links">
     <a href="#about">about</a>
     <a href="#projects">projects</a>
@@ -11,58 +11,75 @@ layout: base.njk
   </div>
 </nav>
 
-<section id="hero">
-  <p class="label">// hello</p>
-  <h1>{{ site.name }}</h1>
-  <p class="sub">{{ site.role }}</p>
-</section>
+<div class="wrap">
 
-<hr />
+  <section id="hero">
+    <p class="label">// hello</p>
+    <h1>{{ site.name }}</h1>
+    <p class="sub">{{ site.role }}</p>
+  </section>
 
-<section id="about">
-  <p class="label">// about</p>
-  <p class="about-text">{{ site.about }}</p>
-</section>
+  <hr />
 
-<hr />
+  <section id="about">
+    <p class="label">// about</p>
+    <div class="about-box">
+      <p class="about-text">{{ site.about }}</p>
+    </div>
+  </section>
 
-<section id="projects">
-  <p class="label">// projects</p>
-  {% for project in site.projects %}
-  <div class="project">
-    <div>
-      <p class="project-name">{{ project.name }}</p>
-      <p class="project-desc">{{ project.desc }}</p>
-      <div class="tags">
-        {% for tag in project.tags %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
+  <hr />
+
+  <section id="projects">
+    <p class="label">// projects</p>
+    {% for project in site.projects %}
+    <div class="project">
+      <div>
+        <p class="project-name">{{ project.name }}</p>
+        <p class="project-desc">{{ project.desc }}</p>
+        <div class="tags">
+          {% for tag in project.tags %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
       </div>
+      <a href="{{ project.link }}" class="project-link">↗ github</a>
     </div>
-    <a href="{{ project.link }}" class="project-link">↗ github</a>
-  </div>
-  {% endfor %}
-</section>
+    {% endfor %}
+  </section>
 
-<hr />
+  <hr />
 
-<section id="contact">
-  <p class="label">// contact</p>
-  <div class="contact-box">
-    <div class="contact-line" onclick="copy('adarsharyan2701@gmail.com')" title="click to copy">
-      <span class="contact-key">email</span>
-      <span class="contact-val">adarsharyan2701@gmail.com</span>
+  <section id="contact">
+    <p class="label">// contact</p>
+    <div class="contact-box">
+      <div class="contact-line" onclick="copy('adarsharyan2701@gmail.com')" title="click to copy">
+        <span class="contact-key">email</span>
+        <span class="contact-val">adarsharyan2701@gmail.com</span>
+      </div>
+      <a class="contact-line" href="https://github.com/ad4rsh2701" target="_blank" rel="noopener">
+        <span class="contact-key">github</span>
+        <span class="contact-val">ad4rsh2701 ↗</span>
+      </a>
+      <a class="contact-line" href="https://linkedin.com/in/adarsh2701" target="_blank" rel="noopener">
+        <span class="contact-key">linkedin</span>
+        <span class="contact-val">adarsh2701 ↗</span>
+      </a>
     </div>
-    <a class="contact-line" href="https://github.com/ad4rsh2701" target="_blank" rel="noopener">
-      <span class="contact-key">github</span>
-      <span class="contact-val">ad4rsh2701 ↗</span>
-    </a>
-    <a class="contact-line" href="https://linkedin.com/in/adarsh2701" target="_blank" rel="noopener">
-      <span class="contact-key">linkedin</span>
-      <span class="contact-val">adarsh2701 ↗</span>
-    </a>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-left">
+    <a href="https://github.com/ad4rsh2701/garden" class="footer-link">github ↗</a>
+    <span>built with 11ty</span>
   </div>
-</section>
+  <div class="footer-right">
+    <span>© 2026 Adarsh Aryan</span>
+    <span>MIT license</span>
+  </div>
+</footer>
 
 <div class="toast" id="toast">copied to clipboard!</div>
 
@@ -76,13 +93,3 @@ layout: base.njk
   }
 </script>
 
-<footer>
-  <div class="footer-left">
-    <a href="https://github.com/ad4rsh2701/garden" class="footer-link">↗ github</a>
-    <span>built with 11ty</span>
-  </div>
-  <div class="footer-right">
-    <span>© 2026 Adarsh Aryan</span>
-    <span>MIT license</span>
-  </div>
-</footer>
