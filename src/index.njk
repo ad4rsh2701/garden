@@ -6,6 +6,7 @@ layout: base.njk
   <span class="logo">{{ site.project }}</span>
   <div class="nav-links">
     <a href="#about">about</a>
+    <a href="#experience">experience</a>
     <a href="#projects">projects</a>
     <a href="#contact">contact</a>
     <button id="theme-toggle">[ go dark ]</button>
@@ -27,6 +28,21 @@ layout: base.njk
     <div class="about-box">
       <p class="about-text">{{ site.about }}</p>
     </div>
+  </section>
+
+  <hr />
+
+  <section id="experience">
+    <p class="label">// experience</p>
+    {% for job in site.experience %}
+    <div class="exp-card">
+      <div>
+        <p class="exp-role">{{ job.role }}</p>
+        <p class="exp-company">{{ job.company }}</p>
+      </div>
+      <span class="exp-period">{{ job.period }}</span>
+    </div>
+    {% endfor %}
   </section>
 
   <hr />

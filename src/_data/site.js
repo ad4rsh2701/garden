@@ -3,6 +3,18 @@ module.exports = {
     name: "Adarsh Aryan",
     role: "Systems & Security Student",
     about: "I build fast, lean and secure software. Interested in systems programming, performance, malware analysis and building tools that get out of the way. Currently studying at NFSU Delhi.",
+    experience: [
+        {
+            role: "VADR & Malware Analysis Intern",
+            company: "Accelleron India Pvt. Ltd.",
+            period: "May – June 2026"
+        },
+        {
+            role: "Summer Trainee",
+            company: "Oil and Gas Corporation (ONGC)",
+            period: "July 2026"
+        }
+    ],
     projects: [
         {
             name: "RiRi",
